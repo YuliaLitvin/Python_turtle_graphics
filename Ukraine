@@ -1,0 +1,22 @@
+import turtle
+from math import cos,sin,pi
+
+turtle.Screen().bgcolor('LightSkyBlue')
+turtle.hideturtle()
+a = 2*pi
+t = 0
+turtle.fillcolor("yellow")
+
+turtle.begin_fill()
+while t < a:
+  turtle.pencolor('blue')
+  turtle.pensize('20')
+  x = 128 * sin(t)**3
+  y = 8 * (13*cos(t)-5*cos(2*t)-2*cos(3*t)-cos(4*t)-5)
+  turtle.goto(x,y)
+  t += 0.01
+turtle.end_fill()
+turtle.fillcolor("black")
+turtle.penup()
+turtle.goto(0, -45)
+turtle.write('Stay with Ukraine!', align='center', font=("Carefree Cyrillic", int(40 / 2)))
